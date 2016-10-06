@@ -1,11 +1,10 @@
 import React from 'react';
 
-class GifContainer extends React.Component {
-  render() {
-    return (
-      <div> Hi!!!! </div>
-    )
-  }
+export default function GifContainer(props) {
+  var images = (props.pics).map(imgUrl => <img src={imgUrl} />)
+  return (
+    <div>
+      {images}
+    </div> 
+  )
 }
-
-export default GifContainer;

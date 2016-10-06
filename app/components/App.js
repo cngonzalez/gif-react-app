@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <div>
         <Search search={this.searchGiphy} current={this.state.currentSearch} updateCurrent={this.updateCurrent}/>
-        <GifContainer picUrls={this.state.picUrls} />
+        <GifContainer pics={this.state.displayPics} />
       </div>
     )
   }
