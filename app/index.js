@@ -9,12 +9,6 @@ import { fetchUrls, receiveUrls } from './src/actions/actions'
   
 let store = createStore(gifSearcher, applyMiddleware(thunkMiddleware))
 
-function five() {
-  console.log(store.getState())
-}
-
-setInterval(five, 5000);
-
 ReactDOM.render(
   <Provider store={store}>
     <App />

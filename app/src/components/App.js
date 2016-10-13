@@ -1,10 +1,11 @@
 import React from 'react';
 import Search from './Search';
-import GifContainer from './GifContainer';
+import VisiblePics from './containers/VisiblePics'
 
 const App = () => (
       <div>
         <Search />  
+        <VisiblePics />
       </div>
     )
 
