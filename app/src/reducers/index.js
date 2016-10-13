@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux'
-import { picsReducer, searchReducer} from './reducers'
+import { picsReducer} from './reducers'
 
 const gifSearcher = combineReducers({
-  currentSearch: searchReducer,
   displayPics: picsReducer
 });
 

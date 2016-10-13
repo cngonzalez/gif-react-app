@@ -1,12 +1,14 @@
 import React from 'react';
+import thunkMiddleware from 'redux-thunk'
 import  ReactDOM from 'react-dom';
 import App from './src/components/App';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import gifSearcher from './src/reducers/index'
 import { Provider} from 'react-redux'
-import { fetchUrls, updateCurrent } from './src/actions/actions'
+import { fetchUrls, receiveUrls } from './src/actions/actions'
   
-let store = createStore(gifSearcher)
+let store = createStore(gifSearcher, applyMiddleware(thunkMiddleware))
+
 function five() {
   console.log(store.getState())
 }
