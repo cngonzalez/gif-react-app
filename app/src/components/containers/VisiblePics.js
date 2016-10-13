@@ -12,6 +12,17 @@ const mapStateToProps = (state) => {
   }
 }
 
-const VisiblePics = connect(mapStateToProps)(GifContainer) 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onClick: (imgUrl) => {
+      dispatch(toggleCollection(imgUrl))
+    }
+  }
+}
+
+const VisiblePics = connect(
+  mapStateToProps,
+  mapDispatchToProps
+  )(GifContainer) 
 
 export default VisiblePics 

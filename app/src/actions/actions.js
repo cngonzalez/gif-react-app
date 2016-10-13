@@ -15,3 +15,17 @@ export function fetchUrls(currentSearch) {
       .then(json => dispatch(receiveUrls(json)))
   }
 }
+
+export function addToCollection(url) {
+  return {
+    type: 'ADD_URL',
+    payload: url
+  }
+}
+
+export function removeFromCollection(url) {
+  return {
+    type: 'REMOVE_URL',
+    payload: url
+  }
+}

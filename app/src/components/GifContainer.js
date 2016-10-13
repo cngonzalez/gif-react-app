@@ -2,7 +2,9 @@ import React from 'react';
 
 const GifContainer = (props) => (
   <div>
-  {props.displayPics.map(imgUrl => <img src={imgUrl} />)}
+    {props.displayPics.map(imgUrl => <Gif 
+      imgUrl={imgUrl}
+      onClick={() => props.onClick(imgUrl)}/>)}
 </div> 
 )
 
