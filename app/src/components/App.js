@@ -14,23 +14,6 @@ class App extends React.Component {
     this.updateCurrent = this.updateCurrent.bind(this);
     this.parsePics = this.parsePics.bind(this);
   }
-  searchGiphy() {
-    var term = (this.state.currentSearch).replace(" ", "+");
-    var url = `http://api.giphy.com/v1/gifs/search?q=${term}&api_key=dc6zaTOxFJmzC`;
-    fetch(url).then(res => res.json())
-      .then(json => this.parsePics(json.data));
-  }
-  parsePics(gifObjects){
-    var urls = gifObjects.map(obj => obj.images.fixed_height.url);
-    this.setState({
-      displayPics: urls
-    });
-  }
-  updateCurrent(e) {
-    this.setState({
-      currentSearch: e.target.value
-    });
-  }
   render() {
     return (
       <div>
