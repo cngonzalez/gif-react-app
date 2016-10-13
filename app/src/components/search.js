@@ -1,11 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { fetchUrls } from '../actions/actions'
 
-export default function Search(props) {
-  return (
+let Search = ({dispatch}) => 
+  (
     <div>
-      <input type='text' value={props.current} onChange={props.updateCurrent} />
-      <button onClick={props.search} value='submit' />
+      <input type='text' onChange={(e) => dispatch(fetchUrls(e.target.value)) } />
     </div>
-   )
-  }
+  )
+
+Search = connect()(Search)
+
+export default Search
 
