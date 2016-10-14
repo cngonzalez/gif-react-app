@@ -3,9 +3,8 @@ import Gif from './Gif'
 
 const GifContainer = (props) => (
   <div>
-    {props.displayPics.map(imgUrl => <Gif 
-      imgUrl={imgUrl}
-      onClick={() => props.onClick(imgUrl)}/>)}
+    {props.displayPics.map((imgUrl, i) => <Gif 
+      imgUrl={imgUrl} key={i}/>)}
 </div> 
 )
 

@@ -16,20 +16,24 @@ export function searchReducer(state = '', action) {
   }
 }
 
+
 export function collectionReducer(state=[], action) {
   switch (action.type) {
     case 'ADD_URL':
       return [...state, action.payload]
     case 'REMOVE_URL':
-      var i = state.indexOf(action.payload)
-      var newState = state.slice(i, i) 
-      return newState
+      return state.filter((url) => url != action.payload)
     default:
       return state
   }
 }
 
-export function viewReducer(state='COLLECTION', action) {
-  var newState = (state === 'COLLECTION') ? 'ALL' : 'COLLECTION'
-  return newState
+export function viewReducer(state='ALL', action) {
+  switch (action.type) {
+    case 'VIEW_TOGGLE':
+      var newState = (state === 'COLLECTION') ? 'ALL' : 'COLLECTION'
+      return newState
+    default:
+      return state
+  }
 }

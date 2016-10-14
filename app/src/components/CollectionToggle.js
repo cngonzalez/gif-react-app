@@ -1,8 +1,8 @@
 import React from 'react'
 
-const CollectionToggle = (arg) => (
+const CollectionToggle = (props) => (
   <div>
-    <a href="#">placeholder!!!</a>
+    <button onClick={() => props.onClick(props.url, props.collected)}> {props.message} </button>
   </div>
   )
 

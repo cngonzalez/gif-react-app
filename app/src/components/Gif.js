@@ -1,11 +1,12 @@
 import React from 'react'
-import CollectionToggle from './CollectionToggle'
+import ToggleContainer from './containers/ToggleContainer'
 
-const Gif = ({ imgUrl, onClick }) => (
+const Gif = ({ imgUrl }) => (
   <div>
     <img src={imgUrl} />
-    <CollectionToggle onClick={onClick} />
+    <ToggleContainer url={imgUrl} /> 
   </div>
 )
 
 export default Gif
+
