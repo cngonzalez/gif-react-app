@@ -28,3 +28,8 @@ export function collectionReducer(state=[], action) {
       return state
   }
 }
+
+export function viewReducer(state='COLLECTION', action) {
+  var newState = (state === 'COLLECTION') ? 'ALL' : 'COLLECTION'
+  return newState
+}

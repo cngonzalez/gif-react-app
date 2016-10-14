@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
-import { picsReducer, collectionReducer } from './reducers'
+import {viewReducer, picsReducer, collectionReducer } from './reducers'
 
 const gifSearcher = combineReducers({
-  displayPics: picsReducer,
-  collection: collectionReducer
+  searchPics: picsReducer,
+  collection: collectionReducer,
+  currentView: viewReducer
 });
 
 export default gifSearcher

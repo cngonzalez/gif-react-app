@@ -29,3 +29,9 @@ export function removeFromCollection(url) {
     payload: url
   }
 }
+
+export function viewToggle() {
+  return {
+    type: 'VIEW_TOGGLE'
+  }
+}

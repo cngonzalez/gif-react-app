@@ -1,4 +1,5 @@
 import React from 'react';
+import Gif from './Gif'
 
 const GifContainer = (props) => (
   <div>
